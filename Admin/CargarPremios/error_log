@@ -1,0 +1,24 @@
+[19-Jan-2023 14:58:03 America/Caracas] PHP Fatal error:  Uncaught TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php:55
+Stack trace:
+#0 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(55): date('Y-m-d H:i:s', '02:00 PM')
+#1 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(3): premiar()
+#2 {main}
+  thrown in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php on line 55
+[19-Jan-2023 14:59:53 America/Caracas] PHP Fatal error:  Uncaught TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php:55
+Stack trace:
+#0 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(55): date('Y-m-d H:i:s', '02:00 PM')
+#1 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(3): premiar()
+#2 {main}
+  thrown in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php on line 55
+[19-Jan-2023 15:01:03 America/Caracas] PHP Fatal error:  Uncaught TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php:57
+Stack trace:
+#0 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(57): date('Y-m-d H:i:s', '02:00 PM')
+#1 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(3): premiar()
+#2 {main}
+  thrown in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php on line 57
+[19-Jan-2023 15:04:35 America/Caracas] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect datetime value: '03:00 PM' for column `ki11892154_db_Sorteos`.`premios`.`hora` at row 1 in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php:72
+Stack trace:
+#0 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(72): mysqli_query(Object(mysqli), 'call web_master...')
+#1 /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php(3): premiar()
+#2 {main}
+  thrown in /home/ki11892154/public_html/Admin/CargarPremios/Premiar.php on line 72
