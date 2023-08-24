@@ -85,7 +85,7 @@
 
 
 
-<body class="[ bg-[#197291] h-full ] [ md:h-screen ] [ lg:h-screen ]">
+<body class="[ bg-[#197291] h-full ] ">
 
     <div id="loader" class="loader-animarion" style="display: flex;">
 
