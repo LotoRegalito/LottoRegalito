@@ -2,39 +2,38 @@
 
 <html lang="es" data-theme="cmyk">
 
+    <head>
 
+        <meta charset="UTF-8">
 
-<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LottoRegalito</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/logo-color-solo.png">
 
-    <title>LottoRegalito</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link rel="icon" href="./img/logo-color-solo.png">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css"
+            href="./font/Fontspring-DEMO-configalt-regular.otf">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/index.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
-    <link rel="stylesheet" href="../css/index.css">
-
-    <script>
+        <script>
 
         tailwind.config = {
 
@@ -57,19 +56,15 @@
 
     </script>
 
-    <style>
+        <style>
         .no-border {
             border: 0 !important;
         }
     </style>
 
+    </head>
 
-
-</head>
-
-
-
-<script>
+    <script>
 
     $(window).scroll(function () {
 
@@ -103,282 +98,319 @@
 
 </script>
 
+    <div id="loader" class="loader-animarion" style="display: flex;">
 
+        <div class="lds-ellipsis">
 
+            <div></div>
 
+            <div></div>
 
-<div id="loader" class="loader-animarion" style="display: flex;">
+            <div></div>
 
-    <div class="lds-ellipsis">
+            <div></div>
 
-        <div></div>
-
-        <div></div>
-
-        <div></div>
-
-        <div></div>
+        </div>
 
     </div>
 
-</div>
+    <body class="h-screen  "
+        style="font-family: 'FSP DEMO - Config', sans-serif;">
 
+        <div class="navbar bg-base-100 z-20">
+            <div class="navbar-start">
+                <div class="[ dropdown ] [ md:hidden ] [ lg:hidden ]">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                            fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="./Resultados/index.php">Resultados</a></li>
+                        <li><a href="./Afiche/index.html">Afiche</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-ghost normal-case text-xl">
+                    <img src="./img/logo-color.png" class="w-20">
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
 
-
-<body class="h-screen  ">
-
-    <div class="navbar bg-base-100 z-20">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
+                </ul>
+            </div>
+            <div class="[ navbar-end hidden  gap-3 ] [ md:flex ] [ lg:flex ] ">
+                <a href="./Resultados/" class="btn btn-primary text-white"><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd"
+                            d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
+                            clip-rule="evenodd" />
                     </svg>
-                </label>
+                    Ver Resultados</a>
+                <a href="./Afiche/" class="btn btn-primary text-white"><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625z" />
+                        <path
+                            d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+                    </svg>
+
+                    Afiche</a>
+            </div>
+        </div>
+
+        <div class="carousel w-full">
+            <div id="item1" class="carousel-item w-full">
+                <picture class="w-full">
+                    <source media="(min-width: 100px) and (max-width: 600px)"
+                        srcset="./img/carouse_img1_mobile.jpg">
+                    <img src="./img/carouse_img1_desktop.jpg"
+                        class="block w-full sm:h-auto h-96  object-cover  ">
+                </picture>
 
             </div>
-            <a href="#" class="btn btn-ghost normal-case text-xl">
-                <img src="./img/logo-color.png" class="w-20">
-            </a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a href="./Resultados/" class="btn btn-primary text-white"><svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd"
-                        d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
-                        clip-rule="evenodd" />
-                </svg>
-                Ver Resultados</a>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="carousel w-full">
-        <div id="item1" class="carousel-item w-full">
-            <picture class="w-full">
-                <source media="(min-width: 100px) and (max-width: 600px)" srcset="./img/carouse_img1_mobile.png">
-                <img src="./img/carouse_img1_desktop.png" class="block w-full sm:h-auto h-96  object-cover  ">
-            </picture>
+            <div id="item2" class="carousel-item w-full">
+                <picture class="w-full">
+                    <source media="(min-width: 100px) and (max-width: 600px)"
+                        srcset="./img/carouse_img2_mobile.jpg">
+                    <img src="./img/carouse_img2_desktop.jpg"
+                        class="block w-full sm:h-auto h-96  object-cover  ">
+                </picture>
+            </div>
 
         </div>
-        <div id="item2" class="carousel-item w-full">
-            <picture class="w-full">
-                <source media="(min-width: 100px) and (max-width: 600px)" srcset="./img/carouse_img2_mobile.png">
-                <img src="./img/carouse_img2_desktop.png" class="block w-full sm:h-auto h-96  object-cover  ">
-            </picture>
+        <div class="flex justify-center w-full py-2 gap-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
         </div>
 
-    </div>
-    <div class="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" class="btn btn-xs">1</a>
-        <a href="#item2" class="btn btn-xs">2</a>
-    </div>
+        <section data-aos="fade-up"
+            class="px-2 sm:px-32 py-2.5  border-gray-200 ">
 
+            <div class="font-semibold rounded-lg px-5  ">
 
+                <section
+                    class=" mt-5 border-gray-200  font-bold  text-center rounded-md py-5">
 
+                    <span style="font-family: 'Roboto', sans-serif;"
+                        class=" lg:text-3xl sm:text-2xl text-xl self-center font-bold  text-center  text-black">
 
+                        Tu Mejor Opcion Para Jugar y Divertirse</span>
 
-    <section data-aos="fade-up" class="px-2 sm:px-32 py-2.5  border-gray-200 ">
+                </section>
 
-        <div class="font-semibold rounded-lg px-5  ">
+                <div
+                    class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
-            <section class=" mt-5 border-gray-200  font-bold  text-center rounded-md py-5">
+                    <template x-for="post in posts">
 
-                <span style="font-family: 'Roboto', sans-serif;"
-                    class=" lg:text-3xl sm:text-2xl text-xl self-center font-bold  text-center  text-black">
+                        <!-- Card Item -->
 
-                    Tu Mejor Opcion Para Jugar y Divertirse</span>
+                        <div
+                            class="my-8 rounded   dark:shadow-gray-900   duration-300 hover:-translate-y-1"
+                            x-for="(post, index) in posts">
 
+                            <!-- Clickable Area -->
 
+                            <a _href="link" class="cursor-pointer">
 
-            </section>
+                                <figure>
+
+                                    <!-- Image -->
+
+                                    <img
+                                        :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                        loading="lazy"
+                                        class="rounded-xl   object-cover">
+
+                                    400 <figcaption class="p-4">
+
+                                        <!-- Title -->
+
+                                        <p
+                                            class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-400"
+                                            x-text="post.title" w-[400px]
+                                            h-[288px]>
+
+                                            <!-- Post Title -->
+
+                                        </p>
+
+                                        <!-- Description -->
+
+                                        <small
+                                            class="leading-5 text-gray-400 dark:text-gray-400"
+                                            x-text="post.description">
+
+                                            <!-- Post Description -->
+
+                                        </small>
+
+                                    </figcaption>
+
+                                </figure>
+
+                            </a>
+
+                        </div>
+
+                    </template>
+
+                    <div data-aos="flip-left"
+                        class="my-8 rounded    dark:shadow-gray-900   duration-300 hover:-translate-y-1"
+                        x-for="(post, index) in posts">
+                        <!-- Clickable Area -->
+                        <a _href="link" class="cursor-pointer">
+                            <figure>
+                                <!-- Image -->
+                                <img
+                                    :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                    loading="lazy"
+                                    class="w-[400px] h-[288px] rounded-xl w-full h-full  object-cover"
+                                    src="./img/sorteo_item.png">
+                                <div class="px-3 pb-2">
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
+                    <div data-aos="flip-left"
+                        class="my-8 rounded    dark:shadow-gray-900   duration-300 hover:-translate-y-1"
+                        x-for="(post, index) in posts">
+                        <!-- Clickable Area -->
+                        <a _href="link" class="cursor-pointer">
+                            <figure>
+                                <!-- Image -->
+                                <img
+                                    :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                    loading="lazy"
+                                    class="w-[400px] h-[288px] rounded-xl w-full h-full  object-cover"
+                                    src="https://placehold.jp/50/0e74b4/ffffff/400x288.png?text=Proximamente">
+                                <div class="px-3 pb-2">
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
+                    <div data-aos="flip-left"
+                        class="my-8 rounded    dark:shadow-gray-900   duration-300 hover:-translate-y-1"
+                        x-for="(post, index) in posts">
+                        <!-- Clickable Area -->
+                        <a _href="link" class="cursor-pointer">
+                            <figure>
+                                <!-- Image -->
+                                <img
+                                    :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                    loading="lazy"
+                                    class="w-[400px] h-[288px] rounded-xl w-full h-full  object-cover"
+                                    src="https://placehold.jp/50/0e74b4/ffffff/400x288.png?text=Proximamente">
+                                <div class="px-3 pb-2">
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up" class="  border-gray-200  sm:py-0 py-3">
+
+            <div class>
+
+                <div class="overflow-hidden rounded-lg">
+
+                    <img loading="lazy" class="w-full"
+                        src="./img/Publicidad_deskop_1.png" alt>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section data-aos="fade-up"
+            class="px-2 font-bold sm:px-32 sm:py-32 border-gray-200  text-center aos-init aos-animate">
+
+            <span style="font-family: 'Roboto', sans-serif;"
+                class=" lg:text-3xl sm:text-2xl text-xl self-center">Navegadores
+
+                Compatibles</span>
 
             <div
-                class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                class="lg:mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
-                <template x-for="post in posts">
+                <div data-aos="flip-left"
+                    class=" w-full  rounded-lg p-12 flex flex-col justify-center items-center">
 
-                    <!-- Card Item -->
+                    <div class="mb-8">
 
-                    <div class="my-8 rounded   dark:shadow-gray-900   duration-300 hover:-translate-y-1"
-                        x-for="(post, index) in posts">
-
-                        <!-- Clickable Area -->
-
-                        <a _href="link" class="cursor-pointer">
-
-                            <figure>
-
-                                <!-- Image -->
-
-                                <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'" loading="lazy"
-                                    class="rounded-t  w-[400px] h-[288px] object-cover">
-
-
-
-                                400 <figcaption class="p-4">
-
-                                    <!-- Title -->
-
-                                    <p class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-400"
-                                        x-text="post.title">
-
-                                        <!-- Post Title -->
-
-                                    </p>
-
-
-
-                                    <!-- Description -->
-
-                                    <small class="leading-5 text-gray-400 dark:text-gray-400" x-text="post.description">
-
-                                        <!-- Post Description -->
-
-                                    </small>
-
-                                </figcaption>
-
-                            </figure>
-
-                        </a>
+                        <img
+                            class="object-center object-cover rounded-full h-36 w-36"
+                            loading="lazy"
+                            src="./img/chrome-logo.png" alt="photo">
 
                     </div>
 
-                </template>
+                    <div class="text-center">
+
+                        <p class="text-xl font-bold mb-2">Chrome</p>
+
+                        <p class="text-base text-gray-400 font-normal">Versiones
+                            Superiores 80+</p>
+
+                    </div>
+
+                </div>
 
                 <div data-aos="flip-left"
-                    class="my-8 rounded   dark:shadow-gray-900   duration-300 hover:-translate-y-1"
-                    x-for="(post, index) in posts">
-                    <!-- Clickable Area -->
-                    <a _href="link" class="cursor-pointer">
-                        <figure>
-                            <!-- Image -->
-                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'" loading="lazy"
-                                class="rounded-t  w-[400px] h-[288px] object-cover" src="./img/sorteo_item.png">
-                            <div class="px-3 pb-2">
-                            </div>
-                        </figure>
-                    </a>
-                </div>
+                    class=" w-full  rounded-lg p-12 flex flex-col justify-center items-center">
 
-            </div>
-        </div>
-    </section>
+                    <div class="mb-8">
 
-    <section data-aos="fade-up" class="  border-gray-200  sm:py-0 py-3">
+                        <img
+                            class="object-center object-cover rounded-full h-36 w-36"
+                            loading="lazy"
+                            src="./img/Opera_logo.png" alt="photo">
 
-        <div class="">
+                    </div>
 
-            <div class="overflow-hidden rounded-lg">
+                    <div class="text-center">
 
-                <img loading="lazy" class="w-full" src="./img/Publicidad_deskop_1.png" alt="">
+                        <p class="text-xl font-bold mb-2">Opera</p>
 
-            </div>
+                        <p class="text-base text-gray-400 font-normal">Versiones
+                            Superiores 67+</p>
 
-        </div>
-
-
-
-    </section>
-
-
-
-
-
-    <section data-aos="fade-up"
-        class="px-2 font-bold sm:px-32 sm:py-32 border-gray-200  text-center aos-init aos-animate">
-
-        <span style="font-family: 'Roboto', sans-serif;"
-            class=" lg:text-3xl sm:text-2xl text-xl self-center">Navegadores
-
-            Compatibles</span>
-
-        <div class="lg:mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
-
-            <div data-aos="flip-left" class=" w-full  rounded-lg p-12 flex flex-col justify-center items-center">
-
-                <div class="mb-8">
-
-                    <img class="object-center object-cover rounded-full h-36 w-36" loading="lazy"
-                        src="./img/chrome-logo.png" alt="photo">
-
-                </div>
-
-                <div class="text-center">
-
-                    <p class="text-xl font-bold mb-2">Chrome</p>
-
-                    <p class="text-base text-gray-400 font-normal">Versiones Superiores 80+</p>
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div data-aos="flip-left" class=" w-full  rounded-lg p-12 flex flex-col justify-center items-center">
+        <section data-aos="fade-up" class="  border-gray-200 ">
 
-                <div class="mb-8">
+            <div class=" ">
 
-                    <img class="object-center object-cover rounded-full h-36 w-36" loading="lazy"
-                        src="./img/Opera_logo.png" alt="photo">
+                <div class="overflow-hidden rounded-lg">
 
-                </div>
-
-                <div class="text-center">
-
-                    <p class="text-xl font-bold mb-2">Opera</p>
-
-                    <p class="text-base text-gray-400 font-normal">Versiones Superiores 67+</p>
+                    <img loading="lazy" class="w-full"
+                        src="./img/banners_img2_desktop.png" alt>
 
                 </div>
 
             </div>
 
+        </section>
 
-
-        </div>
-
-    </section>
-
-
-
-
-    <section data-aos="fade-up" class="  border-gray-200 ">
-
-        <div class=" ">
-
-            <div class="overflow-hidden rounded-lg">
-
-                <img loading="lazy" class="w-full" src="./img/banners_img2_desktop.png" alt="">
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-    <!---
+        <!---
     <section data-aos="fade-up"
         class="bg-black border-gray-200 px-2 sm:px-32 py-32  font-bold text-blue-900 text-center">
 
@@ -411,68 +443,68 @@
 
     </section>
 ----->
-    <footer class="p-4 mt-3  rounded-lg shadow md:px-6 md:py-8 ">
+        <footer
+            class=" [ p-4 mt-3  rounded-lg shadow bg-gray-100  shadow-xl border-t ] [ md:px-32 md:py-8  ] []    ">
 
-        <div class="md:flex md:justify-between">
+            <div class="md:flex md:justify-between">
 
-            <div class="mb-6 md:mb-0">
+                <div class="mb-6 md:mb-0">
 
-                <img src="./img/logo-color.png" class="h-32 mx-auto" alt="">
+                    <img src="./img/logo-color.png" class="h-32 mx-auto" alt>
+
+                </div>
+
+                <div class>
+
+                    <h2
+                        class="text-center mb-6 text-sm font-semibold  uppercase text-black">Horarios
+                        De LottoRegalito
+
+                    </h2>
+
+                    <ul class="text-gray-600">
+
+                        <li class="mb-4">
+
+                            <p class="text-center  break-words">09:00 AM - 10:00
+                                AM - 11:00 AM</p>
+
+                            <p class="text-center  break-words"> 12:00 PM -
+                                01:00 PM - 02:00 PM</p>
+
+                            <p class="text-center  break-words">03:00 PM - 04:00
+                                PM - 05:00 PM</p>
+                            <p class="text-center  break-words">06:00 PM - 07:00
+                                PM</p>
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
 
+            <hr
+                class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
+            <span
+                class="block text-sm text-gray-400 sm:text-center dark:text-gray-400">©
+                2022 <a href="#"
+                    class="hover:underline">LottoRegalito</a>. Todos los
+                Derechos Reservados. Solo para mayores de 18 años
 
-            <div class="">
+            </span>
 
-                <h2 class="text-center mb-6 text-sm font-semibold  uppercase text-black">Horarios De LottoRegalito
+        </footer>
 
-                </h2>
+    </body>
 
-                <ul class="text-gray-600">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-                    <li class="mb-4">
-
-                        <p class="text-center  break-words">09:00 AM - 10:00 AM - 11:00 AM</p>
-
-                        <p class="text-center  break-words"> 12:00 PM - 01:00 PM - 02:00 PM</p>
-
-                        <p class="text-center  break-words">03:00 PM - 04:00 PM - 05:00 PM</p>
-                        <p class="text-center  break-words">06:00 PM - 07:00 PM</p>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-
-        </div>
-
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-
-        <span class="block text-sm text-gray-400 sm:text-center dark:text-gray-400">© 2022 <a href="#"
-                class="hover:underline">LottoRegalito</a>. Todos los Derechos Reservados. Solo para mayores de 18 años
-
-        </span>
-
-    </footer>
-
-
-
-
-
-</body>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script>
+    <script>
 
     AOS.init();
 
 </script>
-
-
 
 </html>
