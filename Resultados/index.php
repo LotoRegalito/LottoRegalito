@@ -78,7 +78,7 @@
 
         console.log('listo');
 
-        $(".loader-animarion").fadeOut("slow");
+        $("#loader").fadeOut("slow");
 
     });
 </script>
@@ -87,20 +87,8 @@
 
 <body class="[ bg-[#197291] h-full ] ">
 
-    <div id="loader" class="loader-animarion" style="display: flex;">
-
-        <div class="lds-ellipsis">
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-        </div>
-
+    <div id="loader" class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white   z-50">
+        <div class="loader"> <object data="../img/loader_chunk.svg" width="100" height="100"> </object> </div>
     </div>
 
     <div class="navbar bg-base-100 z-20">
@@ -117,7 +105,7 @@
                     <li><a href="../#">Contactanos</a></li>
                 </ul>
             </div>
-            <a href="#" class="btn btn-ghost normal-case text-xl">
+            <a href="../" class="btn btn-ghost normal-case text-xl">
                 <img src="../img/logo-color.png" class="w-20">
             </a>
         </div>
