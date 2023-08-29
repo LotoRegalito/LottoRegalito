@@ -190,7 +190,7 @@
                         //* obtenemos el Nombre de la Carpeta Segun el Codgio Del Sorteo
                         let img_src = '';
                         if (id_sorteo == '1097') {
-                            img_src = 'lottoregalito';
+                            img_src = 'lottoregalito_compress';
                         }
 
                         $('#resultados').html('');
@@ -202,7 +202,7 @@
                             cadena = ganador[0]; //* obtenemos el id del Ganador
 
                             if (cadena.length == 1 || cadena.length == 2) { //* si la cadena contiene 1 o 2 digitos , colocamos de manera directa los id para las imagenes
-                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../lottoregalito_compress/${img_src}/${cadena}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
+                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${cadena}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
                             }
                             if (cadena.length == 3 || cadena.length == 4) {
                                 //* si la cadena contiene 3 digitos ,se le agrega un 0 al valor que le haga falta para complir con la sintaxis [00-00]
@@ -216,7 +216,7 @@
                                     separar2 = "0" + separar2;
                                 }
 
-                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../lottoregalito_compress/${img_src}/${separar1+"-"+separar2}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
+                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${separar1+"-"+separar2}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
                             }
                         }
                         return;
