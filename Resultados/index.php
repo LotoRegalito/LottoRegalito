@@ -190,7 +190,7 @@
                         //* obtenemos el Nombre de la Carpeta Segun el Codgio Del Sorteo
                         let img_src = '';
                         if (id_sorteo == '1097') {
-                            img_src = 'lottoregalito';
+                            img_src = 'lottoregalito_compress';
                         }
 
                         $('#resultados').html('');
