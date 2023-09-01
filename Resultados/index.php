@@ -100,7 +100,6 @@
                     </svg>
                 </label>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="../Resultados/index.php">Resultados</a></li>
                     <li><a href="../Afiche/index.html">Afiche</a></li>
                     <li><a href="../#">Contactanos</a></li>
                 </ul>
@@ -114,18 +113,18 @@
 
             </ul>
         </div>
-        <div class="[ navbar-end hidden  gap-3 ] [ md:flex ] [ lg:flex ] ">
-            <a href="../Resultados/" class="btn btn-primary text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+        <div class="[ navbar-end    gap-3 ] [ md:flex ] [ lg:flex ] ">
+            <a href="../Resultados/" class="[ btn btn-primary text-white ] [ md:flex ] [ lg:flex ]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" clip-rule="evenodd" />
                 </svg>
                 Ver Resultados</a>
-            <a href="../Afiche/" class="btn btn-primary text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+            <a href="../Afiche/" class="[ btn btn-primary text-white hidden ] [ md:flex ] [ lg:flex ]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                     <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625z" />
                     <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
                 </svg>
 
                 Afiche</a>
-            <a href="../#Contactanos" class="btn btn-primary text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+            <a href="../#Contactanos" class="[ btn btn-primary text-white hidden ] [ md:flex ] [ lg:flex ]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
                     <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
                 </svg>
 
@@ -202,7 +201,7 @@
                             cadena = ganador[0]; //* obtenemos el id del Ganador
 
                             if (cadena.length == 1 || cadena.length == 2) { //* si la cadena contiene 1 o 2 digitos , colocamos de manera directa los id para las imagenes
-                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${cadena}.png?v=${i}" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
+                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${cadena}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
                             }
                             if (cadena.length == 3 || cadena.length == 4) {
                                 //* si la cadena contiene 3 digitos ,se le agrega un 0 al valor que le haga falta para complir con la sintaxis [00-00]
@@ -216,7 +215,7 @@
                                     separar2 = "0" + separar2;
                                 }
 
-                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${separar1+"-"+separar2}.png?v=${i}" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
+                                $('#resultados').append(`<div   class=" relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white/10 w-full mb-6 shadow-lg rounded-xl mt-16"><div class="px-6"> <div class="flex flex-wrap justify-center"> <div class="w-full flex justify-center"> <div class="relative"> <img loading="lazy" src="../img/${img_src}/${separar1+"-"+separar2}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"> </div> </div> <div class="w-full text-center mt-20"> </div> </div> <div class="text-center mt-2"> <h3 class="text-2xl  font-bold text-primary leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3> <div class="text-base mt-0 mb-2  text-slate-500 font-bold uppercase"> ${data[i].sorteo} </div> </div> </div> </div>`);
                             }
                         }
                         return;
