@@ -99,9 +99,61 @@
 
 </script>
 
+
+<style>
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid #44ADEE;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #44ADEE transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
 <!-- Contenedor del loader -->
 <div id="loader" class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white   z-50">
-    <div class="loader"> <object data="./img/loader_chunk.svg" width="100" height="100"> </object> </div>
+    <div class="loader">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </div>
 
 <body class="h-screen  " style="font-family: 'FSP DEMO - Config', sans-serif;">
@@ -457,14 +509,13 @@
                 class=" [ px-1 grid-flow-row  ] [ md:grid md:gap-4 md:grid-cols-2 ] [ lg:grid lg:gap-4 lg:grid-cols-3 ]">
                 <div class="relative max-w-sm w-full bg-base-100 shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
                     <div class="  rounded-2xl relative">
-                        <div
-                            class="relative w-full h-72  rounded-br-[100px]  bg-primary  p-4 ">
+                        <div class="relative w-full h-72  rounded-br-[100px]  bg-primary  p-4 ">
                             <div class="absolute w-full h-full flex justify-center items-center">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32 text-white"  version="1.1"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32 text-white" version="1.1"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     x="0" y="0" viewBox="0 0 409.61 409.61"
-                                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                                    x="0" y="0" viewBox="0 0 409.61 409.61" style="enable-background:new 0 0 512 512"
+                                    xml:space="preserve" class="">
                                     <g>
                                         <path
                                             d="M307.205 0h-204.8C46.09 0 .005 46.085.005 102.4v204.81c0 56.3 46.085 102.4 102.4 102.4h204.8c56.315 0 102.4-46.1 102.4-102.4V102.4c0-56.315-46.085-102.4-102.4-102.4zm68.265 307.21c0 37.632-30.612 68.265-68.265 68.265h-204.8c-37.637 0-68.265-30.633-68.265-68.265V102.4c0-37.642 30.628-68.265 68.265-68.265h204.8c37.653 0 68.265 30.623 68.265 68.265v204.81z"
@@ -475,13 +526,13 @@
                                             d="M204.805 102.4c-56.566 0-102.4 45.839-102.4 102.4 0 56.54 45.834 102.41 102.4 102.41 56.55 0 102.4-45.87 102.4-102.41 0-56.561-45.85-102.4-102.4-102.4zm0 170.675c-37.699 0-68.265-30.566-68.265-68.275s30.566-68.265 68.265-68.265 68.265 30.556 68.265 68.265-30.566 68.275-68.265 68.275z"
                                             fill="#ffffff" data-original="#000000" class="" opacity="1"></path>
                                     </g>
-                                 
+
                             </div>
                         </div>
                     </div>
                     <div class="mt-4 pl-2 mb-2    ">
                         <div>
-                            <p class="text-lg font-semibold text-white mb-0">Instagram</p>
+                            <p class="text-lg font-semibold   mb-0">Instagram</p>
                             <p class="text-md text-white mt-0"></p>
                             <div class="w-full flex justify-center"><a href="#"
                                     class=" btn btn-primary text-white">Ir</a></div>
