@@ -190,9 +190,9 @@
 
     <section data-aos="fade-up" class="px-2 sm:px-32 py-2.5 border-gray-200  aos-init aos-animate">
 
-        <div class="rounded-lg flex flex-col gap-5 px-5 shadow-lg bg-white  ">
+        <div class="rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white  ">
 
-            <section class="border-b border-gray-200  mt-5 border-gray-200  font-bold   rounded-md py-5">
+            <section class="border-b border-gray-200  mt-5 border-gray-200  font-bold   rounded-md py-5 flex justify-between">
 
                 <span style="font-family: 'Roboto', sans-serif;" class=" lg:text-3xl sm:text-2xl text-xl self-center    whitespace-nowrap text-black">
 
@@ -202,10 +202,12 @@
 
                 </span>
 
+                <a href="../ResultadosDeLaSemana/" class="[ btn btn-active ] [ md:flex ] [ lg:flex ]">Semana</a>
+
 
 
             </section>
-
+            
 
 
             <script>
@@ -285,6 +287,7 @@
             </div>
 
         </div>
+       
 
     </section>
 
