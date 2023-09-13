@@ -77,7 +77,7 @@
 <script>
     $(window).on('load', function() {
 
-        console.log('listo');
+
 
         //  $("#loader").fadeOut("slow");
 
@@ -284,12 +284,7 @@
 
 
 
-                        console.log(`Cod Sorteo: ${resultados_sorteos.cod_sorteo}`);
-                        console.log(`Ganador: ${resultados_sorteos.ganador}`);
-                        console.log(`Descripción: ${resultados_sorteos.descripcion}`);
-                        console.log(`Fecha: ${resultados_sorteos.fecha}`);
-                        console.log(`Hora: ${resultados_sorteos.hora}`);
-                        console.log('---');
+
                     }
 
                     conten_table += `</tr>`;
@@ -302,7 +297,7 @@
                 return result;
             } catch (error) {
                 $('#loader_data').hide();
-                console.log(error);
+
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
