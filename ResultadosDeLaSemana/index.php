@@ -130,18 +130,27 @@
     </div>
 
 
-    <section class="[ w-full flex justify-center items-center h-full ]">
-        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2    ] [] [ w-4/6 max-h-[500px] ]">
+    <section class="[ w-full flex justify-center items-center h-full p-2 ] [ md:p-0 ] [ lg:p-0 ]">
+        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[600px]   ] [ md:w-4/6    ] [ lg:w-4/6  max-h-[500px] ]">
             <!-----Table----->
 
             <div class="overflow-x-auto">
-                <table id="resultados_semanales" class="table table-zebra table-pin-rows table-pin-cols">
+                <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
+                    <input id="fecha_semana" type="date" value="<?php echo date("Y-m-d");  ?>" placeholder="Type here" class=" [ input input-bordered  input-primary w-full ] [ lg:w-auto ] [ lg:w-auto ] " />
+                </div>
+
+                <table id="resultados_semanales" class="table table-zebra table-pin-rows ">
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>Horario</th>
-
-
+                            <th></th>
+                            <th>lunes</th>
+                            <th>martes</th>
+                            <th>miercoles</th>
+                            <th>jueves</th>
+                            <th>viernes</th>
+                            <th>sabado</th>
+                            <th>domingo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -157,18 +166,40 @@
     </section>
 
     <script>
+        // A $( document ).ready() block.
+        $(document).ready(function() {
+            consutlar_resultados_semanal();
+        });
+        $('#fecha_semana').change(function() {
+            consutlar_resultados_semanal();
+        });
+
+
+
+
+
         async function consutlar_resultados_semanal() {
-          //  let url = '../../master_web/ResultadosDeLosSorteos/Api_Resultados_semanal.php?';
+            //  let url = '../../master_web/ResultadosDeLosSorteos/Api_Resultados_semanal.php?';
             let url = 'https://www.tecnoriente.com.ve/Master_Web/ResultadosDeLosSorteos/Api_Resultados_semanal.php';
             try {
                 result = await $.ajax({
                     url: url,
                     type: 'GET',
+                    beforeSend: () => {
+                        $('#resultados_semanales tbody').html('');
+                        //$("#resultados_semanales").find("th").empty();
+                    },
                     data: {
                         "id_sorteo": "1097",
+                        "fecha": $('#fecha_semana').val(),
                     }
                 });
+                /*
+                                for (let j = 0; j < diasSemana.length; j++) {
 
+                                    $('#resultados_semanales thead tr').append(`<th>${diasSemana[j]}</th>`); //dia de la semana 
+                                }
+                */
 
                 // Create an object to store the grouped results
                 const groupedResults = result.reduce((acc, curr) => {
@@ -189,10 +220,7 @@
 
                 const diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
 
-                for (let j = 0; j < diasSemana.length; j++) {
 
-                    $('#resultados_semanales thead tr').append(`<th>${diasSemana[j]}</th>`); //dia de la semana 
-                }
 
                 let conten_table = "<tr>";
 
@@ -204,7 +232,7 @@
                     let hora_data = "";
 
                     for (const resultados_sorteos of objects) {
-                        
+
                         if (hora_data == resultados_sorteos.hora || hora_data == "") {
 
 
@@ -240,7 +268,7 @@
                         console.log(`Hora: ${resultados_sorteos.hora}`);
                         console.log('---');
                     }
-                     
+
                     conten_table += `</tr>`;
 
                 }
@@ -271,10 +299,7 @@
         }
 
 
-        // A $( document ).ready() block.
-        $(document).ready(function() {
-            consutlar_resultados_semanal();
-        });
+
 
         function groupByDate(data) {
             return data.reduce((result, obj) => {
