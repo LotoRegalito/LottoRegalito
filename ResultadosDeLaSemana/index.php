@@ -131,7 +131,7 @@
 
 
     <section class="[ w-full flex justify-center items-center h-full ]">
-        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2    ] [] [ w-4/6 max-h-72 ]">
+        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2    ] [] [ w-4/6 max-h-[500px] ]">
             <!-----Table----->
 
             <div class="overflow-x-auto">
