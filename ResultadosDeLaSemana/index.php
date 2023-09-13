@@ -130,10 +130,10 @@
     </div>
 
 
-    <section class="[ w-full flex justify-center items-center h-full p-2 ] [ md:p-0 ] [ lg:p-0 ]">
+    <section class="[ w-full flex justify-center items-center h-full p-2 ] [ md:p-0 ] [ lg:p-5 ]">
 
 
-        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[700px] mt-10   ] [ md:w-4/6 md:mt-0 md:max-h-[500px] ] [ lg:w-4/6 lg:max-h-[500px] lg:mt-0 ]">
+        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[700px] mt-10   ] [ md:w-4/6 md:mt-0 md:max-h-[500px] ] [ lg:w-full lg:max-h-[90%] lg:mt-[50px] ]">
             <!-----Table----->
 
             <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
@@ -166,7 +166,7 @@
                 <table id="resultados_semanales" class="table table-xs table-pin-cols">
                     <!-- head -->
                     <thead>
-                        <tr>
+                        <tr class="capitalize">
                             <th>Horarios</th>
                             <td>lunes</td>
                             <td>martes</td>
@@ -203,7 +203,7 @@
 
 
         async function consutlar_resultados_semanal() {
-            //  let url = '../../master_web/ResultadosDeLosSorteos/Api_Resultados_semanal.php?';
+            //let url = '../../master_web/ResultadosDeLosSorteos/Api_Resultados_semanal.php?';
             let url = 'https://www.tecnoriente.com.ve/Master_Web/ResultadosDeLosSorteos/Api_Resultados_semanal.php';
             try {
                 result = await $.ajax({
@@ -249,6 +249,8 @@
 
                 let conten_table = "<tr>";
 
+
+
                 for (const time in groupedResults) {
                     //  console.log(`Time: ${time}`);
                     const objects = groupedResults[time];
@@ -268,19 +270,35 @@
                                 hora_table_html = "";
                             }
 
-                            conten_table += `${hora_table_html}
-                            <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
-                                            <img loading="lazy" src="../img/lottoregalito_compress/${resultados_sorteos.ganador}.png"
-                                                alt="${resultados_sorteos.ganador}" />
+                            if (resultados_sorteos.descripcion != "-") {
+                                conten_table += `${hora_table_html}
+                                <td>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="avatar">
+                                            <div class="mask mask-squircle w-12 h-12">
+                                                <img loading="lazy" src="../img/lottoregalito_compress/${resultados_sorteos.ganador}.png"
+                                                    alt="${resultados_sorteos.ganador}" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="font-bold">
-                                        ${resultados_sorteos.descripcion}
-                                    </div>
-                            </td>`;
+                                        <div class="font-bold">
+                                            ${resultados_sorteos.descripcion}
+                                        </div>
+                                </td>`;
+                            } else {
+                                conten_table += `${hora_table_html}
+                                <td>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="avatar">
+                                            <div class="mask mask-squircle w-12 h-12">
+                                            <svg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 100 100' viewBox='0 0 100 100' class='w-10 h-10'><circle cx='50' cy='50' r='48' fill='none' stroke='#000000' stroke-miterlimit='10' stroke-width='4' class='colorStrokefff svgStroke'></circle><line x1='50' x2='85' y1='50' y2='50.5' fill='none' stroke='#000000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' class='colorStrokefff svgStroke'><animateTransform attributeName='transform' dur='2s' from='0 50 50' repeatCount='indefinite' to='360 50 50' type='rotate'></animateTransform></line><line x1='50' x2='49.5' y1='50' y2='74' fill='none' stroke='#000000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' class='colorStrokefff svgStroke'><animateTransform attributeName='transform' dur='15s' from='0 50 50' repeatCount='indefinite' to='360 50 50' type='rotate'></animateTransform></line></svg>
+                                            </div>
+                                        </div>
+                                        <div class="font-bold">
+                                           Esperando
+                                        </div>
+                                </td>`;
+                            }
+
 
                         }
 
