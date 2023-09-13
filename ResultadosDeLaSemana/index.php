@@ -139,7 +139,7 @@
             <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
                 <input id="fecha_semana" type="date" value="<?php echo date("Y-m-d");  ?>" placeholder="Type here" class=" [ input input-bordered  input-primary w-full ] [ lg:w-auto ] [ lg:w-auto ] " />
             </div>
-            <div class="overflow-x-auto  ">
+            <div class="overflow-x-auto relative ">
 
                 <div id="loader_data" class="bg-white w-full flex justify-center items-center h-full absolute p-5 z-[55]">
                     <div class="flex py-5 justify-center text-center">
