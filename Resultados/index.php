@@ -202,7 +202,7 @@
 
                 </span>
 
-                <a href="../ResultadosDeLaSemana/" class="[ btn btn-active ] [ md:flex ] [ lg:flex ]">Semana</a>
+                <a href="../ResultadosDeLaSemana/" class="[ btn btn-active ] [ md:flex ] [ lg:flex ]">Por Semana</a>
 
 
 
