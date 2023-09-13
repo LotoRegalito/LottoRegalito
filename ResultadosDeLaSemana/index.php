@@ -133,7 +133,7 @@
     <section class="[ w-full flex justify-center items-center h-full p-2 ] [ md:p-0 ] [ lg:p-0 ]">
 
 
-        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[600px]   ] [ md:w-4/6    ] [ lg:w-4/6  max-h-[500px] ]">
+        <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[700px] mt-10   ] [ md:w-4/6 md:mt-0 md:max-h-[500px] ] [ lg:w-4/6 lg:max-h-[500px] lg:mt-0 ]">
             <!-----Table----->
 
             <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
