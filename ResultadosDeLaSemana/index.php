@@ -131,10 +131,15 @@
 
 
     <section class="[ w-full flex justify-center items-center h-full p-2 ] [ md:p-0 ] [ lg:p-0 ]">
+
+
         <div class="[ rounded-lg flex justify-between flex-col gap-5 px-5 shadow-lg bg-white p-2 w-full max-h-[600px]   ] [ md:w-4/6    ] [ lg:w-4/6  max-h-[500px] ]">
             <!-----Table----->
 
-            <div class="overflow-x-auto relative">
+            <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
+                <input id="fecha_semana" type="date" value="<?php echo date("Y-m-d");  ?>" placeholder="Type here" class=" [ input input-bordered  input-primary w-full ] [ lg:w-auto ] [ lg:w-auto ] " />
+            </div>
+            <div class="overflow-x-auto  ">
 
                 <div id="loader_data" class="bg-white w-full flex justify-center items-center h-full absolute p-5 z-[55]">
                     <div class="flex py-5 justify-center text-center">
@@ -157,22 +162,19 @@
                 </div>
 
 
-                <div class="flex gap-3 items-center w-full"><label>Fecha:</label>
-                    <input id="fecha_semana" type="date" value="<?php echo date("Y-m-d");  ?>" placeholder="Type here" class=" [ input input-bordered  input-primary w-full ] [ lg:w-auto ] [ lg:w-auto ] " />
-                </div>
 
-                <table id="resultados_semanales" class="table table-zebra table-pin-rows ">
+                <table id="resultados_semanales" class="table table-xs table-pin-cols">
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>lunes</th>
-                            <th>martes</th>
-                            <th>miercoles</th>
-                            <th>jueves</th>
-                            <th>viernes</th>
-                            <th>sabado</th>
-                            <th>domingo</th>
+                            <th>Horarios</th>
+                            <td>lunes</td>
+                            <td>martes</td>
+                            <td>miercoles</td>
+                            <td>jueves</td>
+                            <td>viernes</td>
+                            <td>sabado</td>
+                            <td>domingo</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -260,7 +262,7 @@
 
 
                             if (hora_data.length == 0) {
-                                hora_table_html = `<td>${resultados_sorteos.hora}</td>`;
+                                hora_table_html = `<th class='z-[10] whitespace-nowrap'>${resultados_sorteos.hora}</th>`;
                                 hora_data = resultados_sorteos.hora;
                             } else {
                                 hora_table_html = "";
