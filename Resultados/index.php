@@ -78,7 +78,7 @@
 
         console.log('listo');
 
-      //  $("#loader").fadeOut("slow");
+        //  $("#loader").fadeOut("slow");
 
     });
 </script>
@@ -133,18 +133,22 @@
 
 
     <!-- Contenedor del loader -->
-    <!----
     <div id="loader" class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white   z-50">
         <div class="loader">
-            <div class="lds-ring">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+
+            Página Insolvente
+            <!-------
+
+              <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+            --------->
+
         </div>
     </div>
-    --->
 
     <div class="navbar bg-base-100 z-20">
         <div class="navbar-start">
@@ -207,7 +211,7 @@
 
 
             </section>
-            
+
 
 
             <script>
@@ -287,7 +291,7 @@
             </div>
 
         </div>
-       
+
 
     </section>
 
